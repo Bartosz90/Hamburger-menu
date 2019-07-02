@@ -11,5 +11,19 @@
     "
     />
   </head>
-  <body></body>
+  <body>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <script>
+      document.querySelector(".hamburger").addEventListener("click", () => {
+        document.querySelectorAll("span").forEach(span => {
+          span.classList.toggle("active");
+        });
+      });
+    </script>
+  </body>
 </html>
