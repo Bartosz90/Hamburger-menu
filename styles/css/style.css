@@ -53,6 +53,7 @@ body {
   position: relative;
   -webkit-transition: 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
   transition: 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  -webkit-backface-visibility: hidden;
 }
 
 .hamburger span:nth-child(1).active {
