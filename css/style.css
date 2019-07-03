@@ -20,7 +20,8 @@ body {
 }
 
 .hamburger {
-  width: 40px;
+  width: 50px;
+  height: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,6 +40,11 @@ body {
   cursor: pointer;
 }
 
+.hamburger:hover span:nth-child(1), .hamburger:hover span:nth-child(4) {
+  -webkit-transform: scaleX(1.1);
+          transform: scaleX(1.1);
+}
+
 .hamburger span {
   display: block;
   width: 40px;
@@ -47,35 +53,34 @@ body {
   position: relative;
   -webkit-transition: 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
   transition: 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-  margin: 4px 0;
 }
 
 .hamburger span:nth-child(1).active {
-  -webkit-transform: translateX(4px) rotate(41deg);
-          transform: translateX(4px) rotate(41deg);
+  -webkit-transform: translateY(10px) rotate(40deg);
+          transform: translateY(10px) rotate(40deg);
 }
 
 .hamburger span:nth-child(4).active {
-  -webkit-transform: translateX(4px) rotate(-41deg);
-          transform: translateX(4px) rotate(-41deg);
-}
-
-.hamburger span:nth-child(1), .hamburger span:nth-child(4) {
-  -webkit-transform-origin: left;
-          transform-origin: left;
+  -webkit-transform: translateY(-10px) rotate(-40deg);
+          transform: translateY(-10px) rotate(-40deg);
 }
 
 .hamburger span:nth-child(2), .hamburger span:nth-child(3) {
   width: 20px;
 }
 
+.hamburger span:nth-child(1), .hamburger span:nth-child(4) {
+  -webkit-transition-delay: .4s;
+          transition-delay: .4s;
+}
+
 .hamburger span:nth-child(2).active {
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  -webkit-transform: translateX(-130%);
+          transform: translateX(-130%);
 }
 
 .hamburger span:nth-child(3).active {
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  -webkit-transform: translateX(130%);
+          transform: translateX(130%);
 }
 /*# sourceMappingURL=style.css.map */

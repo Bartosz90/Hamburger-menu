@@ -9,7 +9,8 @@ body
     justify-content: center 
     align-items: center 
 .hamburger
-    width: 40px
+    width: 50px
+    height: 30px
     display: flex 
     justify-content: center 
     align-items: center
@@ -17,6 +18,8 @@ body
     overflow: hidden
     &:hover 
         cursor: pointer
+    &:hover span:nth-child(1), &:hover span:nth-child(4)
+        transform: scaleX(1.1)
     span
         display: block
         width: 40px 
@@ -24,18 +27,17 @@ body
         background-color: black
         position: relative
         transition: .8s cubic-bezier(0.68, -0.55, 0.27, 1.55)
-        margin: 4px 0
     span:nth-child(1).active
-        transform: translateX(4px) rotate(41deg)
+        transform: translateY(10px) rotate(40deg)
     span:nth-child(4).active
-        transform: translateX(4px) rotate(-41deg)
-    span:nth-child(1), span:nth-child(4)
-        transform-origin: left
+        transform: translateY(-10px) rotate(-40deg)
     span:nth-child(2), span:nth-child(3)
         width: 20px
+    span:nth-child(1), span:nth-child(4)
+        transition-delay: .4s
     span:nth-child(2).active
-        transform: translateX(-100%)
+        transform: translateX(-130%)
     span:nth-child(3).active
-        transform: translateX(100%)
-    
+        transform: translateX(130%)
+
     
